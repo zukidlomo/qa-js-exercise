@@ -27,7 +27,7 @@ function exercise1()
     console.log("Name: " + name + ", Type: " + typeof name);
     console.log("isHungry: " + isHungry + ", Type: " + typeof isHungry);
     console.log("Age: " + age + ", Type: " + typeof age);
-    console.log("Measurements: " + JSON.stringify(measurements) + ", Type: " + typeof measurements);
+    console.log("Measurements: " + measurements+ ", Type: " + typeof measurements);
     console.log("Hobbies: " + hobbies + ", Type: " + typeof hobbies);
     console.log("myAge: " + myAge + ", Type: " + typeof myAge);
     console.log("myHeight: " + myHeight + ", Type: " + typeof myHeight);
