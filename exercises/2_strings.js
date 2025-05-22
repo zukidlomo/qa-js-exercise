@@ -3,15 +3,20 @@ const exercise2 = ()=>
         console.log('- Exercise 2 -');
         console.log("_____________________________");
 
+        //Exercise 2.1, create response message
         const response = "     Hi Zuki! You Have Successfully Completed Exercise 2!     ";
-        console.log("1. Trimmed response:", response.trim());
-        console.log("2. Lowercase response:", response.trim().toLowerCase());
-        console.log("3. Response contains 'success':", response.toLowerCase().includes("success"));
-        console.log("4. Response replaces:", response.trim().replace("Zuki", "Ofentse"))
+        console.log("Original Response:", response);
 
-        // Please Complete Exercise 2 here
+        //Exercise 2.2, trimmed and lowercase response
+        console.log("Trimmed + Lowercase response:", response.trim().toLowerCase());
+        
+        //Exercise 2.3, does word exist?
+        console.log("Response contains 'success':", response.toLowerCase().includes("success"));
+        
+        //Exercise 2.4, replace with another word
+        console.log("Response replaces:", response.trim().replace("Zuki", "Ofentse"));
 
-        // End of Exercise 2
+        //End of Exercise 2 
         console.log("\n- Exercise 2 completed - ");
         console.log("______________________________");
     }
