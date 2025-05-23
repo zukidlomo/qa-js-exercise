@@ -11,18 +11,17 @@ const exercise4 = ()=>
                        "enter email: example@email.com"];
 
 
-        //Exercise 4.2, log step with index
+        //Exercise 4.2, iterate through steps and log each step with index
         qaSteps.forEach((testStep, i) => console.log(`Step ${i+1}: ${testStep}`));
 
         console.log("\n");
 
         //Exercise 4.3, convert to uppercase
-        let testSteps = qaSteps.map(convertUppercase)
-        console.log(testSteps)
-
         function convertUppercase(step){
             return step.toUpperCase();
         }
+        let testSteps = qaSteps.map(convertUppercase)
+        console.log(testSteps)
 
         console.log("\n");
         
@@ -34,6 +33,7 @@ const exercise4 = ()=>
         // End of Exercise 4
         console.log("\n- Exercise 4 completed -");
         console.log("_____________________________");
+        
     }   
 
 module.exports = exercise4;

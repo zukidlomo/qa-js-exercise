@@ -3,7 +3,7 @@ const exercise5 = ()=>
         console.log('- Exercise 5 -');
         console.log("_____________________________");
 
-        // Exercise 5.1, log passed or failed.
+        // Exercise 5.1, log passed or failed (shorthand if statement)
         function logResult(testName, passed){
             passed === true ? console.log(`Test '${testName}' passed.`) : console.log(`Test ${testName} failed.`);
         }

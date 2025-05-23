@@ -1,36 +1,42 @@
-const exercise6 = ()=>
+const exercise6 = async ()=>
     {
         console.log('Exercise 6');
         console.log("_____________________________");
 
-        //Exercise 6.1, fetch users
-        //Exercise 6.2, log user names
-        let usersUrl = "https://jsonplaceholder.typicode.com/users"
-        fetch(usersUrl).then(response => response.json()).then(data => {
-            data.forEach(user => {
+        //Exercise 6.1 and 6.2
+        //Fetching user data
+        let usersUrl = "https://jsonplaceholder.typicode.com/users"   
+        const userPromise = fetch(usersUrl).then(response => response.json()).then(users => {
+            users.forEach(user => {
                 console.log(`User Name: ${user.name} - Email: ${user.email} - Company: ${user.company.name}`);
             })
         })
-
         
-        console.log("\n")
+        //Exercise 6.3 and 6.4
+        //Fetching post titles and counting of occurence of "qui"
         let postsUrl = "https://jsonplaceholder.typicode.com/posts"
-        fetch(postsUrl).then(response => response.json()).then(data =>{
+        const postPromise = fetch(postsUrl).then(response => response.json()).then(posts =>{
             let count = 0;
-            data.forEach(post => {
-                console.log(`Title: ${post.title}`)
+            posts.forEach(post => {console.log(`Title: ${post.title}`)
                 if(post.title.includes("qui")){
                     count++ 
                 }
             })
             console.log("Count: " + count)
         })
+
+        //Wait for promises to complete the log exercise completed
+        return Promise.all([userPromise, postPromise])
+            .then(() => {
+                console.log("\n- Exercise 6 completed -");
+                console.log("_____________________________");
+            })
+            .catch((error) => {
+                console.log("Exercise 6 has the following error:", error);
+            });
         
 
         // End of Exercise 6
-       
-        console.log("Exercise 6 completed");
-        console.log("_____________________________");
 
     }
 
